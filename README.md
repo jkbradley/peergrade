@@ -5,6 +5,12 @@ Research code for peer grading and ranking
  peer grading using cardinal and ordinal grades.  The code is not
  actively supported and may have bugs.
 
+*Citations*: If you use this code in a research publication, please
+ cite:
+    "A Case for Ordinal Peer-evaluation in MOOCs."
+    Nihar B. Shah, Joseph Bradley, Abhay Parekh, Martin J. Wainwright, Kannan Ramchandran.
+    Neural Information Processing Systems (NIPS): Workshop on Data Driven Education, Lake Tahoe, Dec. 2013.
+
 This code contains learning and inference algorithms for a few peer
 grading settings:
 * Cardinal vs. ordinal: Students give each other cardinal
