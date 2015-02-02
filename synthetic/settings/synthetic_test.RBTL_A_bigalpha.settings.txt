@@ -1,0 +1,17 @@
+datapath_stem : ../../results/synthetic/RBTL_A/RBTL_A.data
+outpath_stem : ../../results/synthetic/RBTL_A/RBTL_A
+plotpath_stem : ../../results/synthetic/RBTL_A_plots/RBTL_A
+
+n : 40
+w_distribution : normal
+w_mu : 1.0
+w_sigma2 : 1.0
+w_nonneg : False
+w_L2norm : None
+theta : [10.0, 0.1]
+
+nruns : 50
+max_ntrain : 50000
+
+ntrain_vals : [10, 20, 50, 100, 200, 500, 750, 1000, 2000]
+nfolds : 4

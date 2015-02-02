@@ -1,0 +1,17 @@
+datapath_stem : ../../results/synthetic/BTL_Acons/BTL_Acons.data
+outpath_stem : ../../results/synthetic/BTL_Acons/BTL_Acons
+plotpath_stem : ../../results/synthetic/BTL_Acons_plots/BTL_Acons
+
+n : 50
+w_distribution : normal
+w_mu : 1.0
+w_sigma2 : 1.0
+w_nonneg : True
+w_L2norm : n
+theta : [0.0, 1.0]
+
+nruns : 50
+max_ntrain : 50000
+
+ntrain_vals : [10, 20, 50, 100, 200, 500, 750, 1000, 2000, 5000]
+nfolds : 4

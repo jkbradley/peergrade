@@ -1,0 +1,17 @@
+datapath_stem : ../../results/synthetic/RBTL_cons_whamspam/RBTL_cons_whamspam.data
+outpath_stem : ../../results/synthetic/RBTL_cons_whamspam/RBTL_cons_whamspam
+plotpath_stem : ../../results/synthetic/RBTL_cons_whamspam_plots/RBTL_cons_whamspam
+
+n : 40
+w_distribution : hamspam
+w_mu : 1.0
+w_sigma2 : 1.0
+w_nonneg : True
+w_L2norm : n
+theta : [1.0, 1.0]
+
+nruns : 50
+max_ntrain : 50000
+
+ntrain_vals : [10, 20, 50, 100, 200, 500, 750, 1000, 2000]
+nfolds : 4

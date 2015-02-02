@@ -1,0 +1,33 @@
+% Run BTL SDP and create a plot.
+%
+% Parameters:
+%  wdist  Distribution of w: uniform/linear/sqrtlinear
+function [] = test_BTLSDP(wdist)
+
+d = 10;
+max_n = 100*d;
+num_n_vals = 10;
+n_vals = unique([1:(max_n/num_n_vals):max_n, max_n]);
+sigma = .3;
+a = 1;
+b = 1;
+
+fid = fopen(['test_BTLSDP.' wdist '.out'], 'w');
+fprintf(fid, ['n\tw_loss\tw_obj\tw_est_loss\tw_est_obj' ...
+              '\tw_est0_loss\tw_est0_obj\tw_L2norm' ...
+              '\tw_est_L2norm\tw_est_diff_L2normed' ...
+              '\tw_est0_L2norm\tw_est0_diff_L2normed' ...
+              '\teigengap_normed\truntime\n']);
+for n = n_vals
+    [w_loss, w_obj, w_est_loss, w_est_obj, w_est0_loss, w_est0_obj, ...
+     w_L2norm, w_est_L2norm, w_est_diff_L2normed, w_est0_L2norm, w_est0_diff_L2normed, ...
+     eigengap_normed, runtime] ...
+        = BTLSDP(wdist, d, n, sigma, a, b);
+    fprintf(fid, '%d\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\t%g\n', ...
+            n, w_loss, w_obj, w_est_loss, w_est_obj, w_est0_loss, w_est0_obj, ...
+            w_L2norm, w_est_L2norm, w_est_diff_L2normed, w_est0_L2norm, w_est0_diff_L2normed, ...
+            eigengap_normed, runtime);
+end
+fclose(fid);
+
+end
